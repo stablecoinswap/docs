@@ -1,5 +1,9 @@
 # Table of contents
 
-* [Stablecoinswap API](README.md)
-* [Priceoracle API](priceoracle-api.md)
+* [Getting started](README.md)
+
+## SMART CONTRACT API
+
+* [Stablecoinswap API](smart-contract-api/stablecoinswap-api.md)
+* [Priceoracle API](smart-contract-api/priceoracle-api.md)
 
