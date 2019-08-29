@@ -58,8 +58,8 @@ def removeLiquidity(
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
 | token\_address | address | Address of ERC20 token to remove |
-| stableswap\_token\_amount | uint256 | Amount of stableswap tokens burned |
-| erc20\_min\_output\_amount | uint256 | Minimum ERC20 tokens output |
+| stableswap\_token\_amount | uint256 | Amount of STL tokens to redeem |
+| erc20\_min\_output\_amount | uint256 | Minimum ERC20 tokens output amount |
 | deadline | uint256 | Transaction deadline |
 
 | Returns |  |
@@ -234,7 +234,7 @@ contract.methods.inputTokens(address).call()
 | :--- | ---: |
 | bool | True if an address is in the list of available input tokens |
 
-## ouptputTokens
+## outputTokens
 
 {% code-tabs %}
 {% code-tabs-item title="Smart Contract" %}
@@ -258,30 +258,6 @@ contract.methods.outputTokens(address).call()
 | :--- | ---: |
 | bool | True if an address is in the list of available output tokens |
 
-## permissions
-
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
-```python
-permissions: public(map(string[32], bool))
-```
-{% endcode-tabs-item %}
-
-{% code-tabs-item title="Web3" %}
-```javascript
-contract.methods.permissions(permission_name).call()
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-| Parameter | Type | Description |
-| :--- | :--- | ---: |
-| permission\_name | string | 'tradingAllowed' or 'liquidityAddingAllowed' |
-
-| Returns |  |
-| :--- | ---: |
-| bool | True if a given type of operations is allowed. |
-
 ## priceOracleAddress
 
 {% code-tabs %}
@@ -293,7 +269,7 @@ priceOracleAddress: public(address)
 
 {% code-tabs-item title="Web3" %}
 ```javascript
-contract.methods.priceOracleAddress().cal()
+contract.methods.priceOracleAddress().call()
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
