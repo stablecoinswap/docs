@@ -77,7 +77,11 @@ contract.methods.normalized_token_prices(token_address).call()
 | :--- | ---: |
 | uint256 | Returns normalized price in USD for a token at given address.  |
 
-Where normalized\_usd\_price = usd\_price \* 10\*\*8 \* 10\*\*\(18 - token.decimals\)
+Where:
 
-Example: USD price for USDC = $0.97734655, token has 6 decimals, in this case normalized\_usd\_price = 97734655000000000000
+`normalized_usd_price = usd_price * 10**8 * 10**(18 - token.decimals)`
+
+Example: USD price for USDC = $0.97734655, token has 6 decimals:
+
+`normalized_usd_price = 97734655000000000000`
 
