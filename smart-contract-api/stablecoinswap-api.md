@@ -127,11 +127,25 @@ contract.methods.tokenExchangeRateAfterFees(input_token_address, output_token_ad
 | input\_token\_address | address | Address of ERC20 token to sell |
 | output\_token\_address | address | Address of ERC20 token to buy |
 
-| Returns |  |
-| :--- | ---: |
-| uint265 | Exchange rate multiplied by 10 \*\* input\_token.decimals. Note that due to rounding, the fees could be slightly higher for the tokens with smaller decimal precision and/or if the exchange amount is too low. |
-
-## tokenOutputAmountAfterFees
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Returns</th>
+      <th style="text-align:right"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">uint265</td>
+      <td style="text-align:right">
+        <p>Exchange rate is given at the base level of precision (it is multiplied
+          by 10^(output_token.decimals - input_token.decimals + 22)).</p>
+        <p>Note that due to rounding, the fees could be slightly higher for the tokens
+          with smaller decimal precision and/or if the exchange amount is too low.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>## tokenOutputAmountAfterFees
 
 {% code-tabs %}
 {% code-tabs-item title="Smart Contract" %}
