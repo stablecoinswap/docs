@@ -138,8 +138,8 @@ contract.methods.tokenExchangeRateAfterFees(input_token_address, output_token_ad
     <tr>
       <td style="text-align:left">uint265</td>
       <td style="text-align:right">
-        <p>Exchange rate is given at the base level of precision (it is multiplied
-          by 10^(output_token.decimals - input_token.decimals + 22)).</p>
+        <p>Exchange rate multiplied by 10^22.</p>
+        <p></p>
         <p>Note that due to rounding, the fees could be slightly higher for the tokens
           with smaller decimal precision and/or if the exchange amount is too low.</p>
       </td>
