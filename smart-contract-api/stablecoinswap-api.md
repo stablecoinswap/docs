@@ -34,7 +34,7 @@ contract.methods.addLiquidity(token_address, amount, deadline).send({ from: user
 
 | Returns |  |
 | :--- | ---: |
-| bool | True if successful. Reverts or false on failure |
+| uint256 | The amount of STL tokens received by the sender. |
 
 ## removeLiquidity
 
@@ -66,7 +66,7 @@ def removeLiquidity(
 
 | Returns |  |
 | :--- | ---: |
-| bool | True if successful. Reverts or false on failure |
+| uint256 | The amount of erc20 tokens received by the sender. |
 
 ## swapTokens
 
@@ -100,7 +100,7 @@ contract.methods.swapTokens(input_token_address, output_token_address, input_amo
 
 | Returns |  |
 | :--- | ---: |
-| bool | True if successful. Reverts or false on failure |
+| uint256 | The amount of erc20 tokens received by the sender. |
 
 ## tokenExchangeRateAfterFees
 
