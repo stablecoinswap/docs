@@ -8,6 +8,10 @@ description: Contract is written in Vyper (0.1.0b9)
 
 ## addLiquidity
 
+{% hint style="info" %}
+Adding liquidity is free. However, removing liquidity bears the same fee as the swap operation. This is to prevent users from bypassing the trading fee by depositing liquidity in one token and instantly withdrawing it in another token.
+{% endhint %}
+
 {% code-tabs %}
 {% code-tabs-item title="Smart Contract" %}
 ```python
