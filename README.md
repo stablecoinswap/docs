@@ -8,6 +8,7 @@ description: >-
 
 ## Addresses
 
+* ENS: stablecoinswap.eth
 * Stablecoinswap: [0x652511ebd2c77aa00bc3f0b910928418708ad2ee](https://etherscan.io/address/0x652511ebd2c77aa00bc3f0b910928418708ad2ee)
 * PriceOracle: [0x2b4ba323ab07da8250e896b6ff29bb96ddfe55a9](https://etherscan.io/address/0x2b4ba323ab07da8250e896b6ff29bb96ddfe55a9)
 
