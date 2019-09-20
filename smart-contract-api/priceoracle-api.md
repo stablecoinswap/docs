@@ -81,7 +81,9 @@ Where:
 
 `normalized_usd_price = usd_price * 10**8 * 10**(18 - token.decimals)`
 
-Example: USD price for USDC = $0.97734655, token has 6 decimals:
+Example: USD price for USDC = $1.0, token has 6 decimals:
 
-`normalized_usd_price = 97734655000000000000`
+`normalized_usd_price = 100000000000000000000`
+
+USD price for DAI token is the price according to [https://etherscan.io/address/0x787f552bdc17332c98aa360748884513e3cb401a](https://etherscan.io/address/0x787f552bdc17332c98aa360748884513e3cb401a#readContract) and USD price for any other token is always $1.0
 
