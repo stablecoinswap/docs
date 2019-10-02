@@ -29,12 +29,12 @@ contract.methods.poolSize(stablecoinswap_address).call()
 | :--- | ---: |
 | uint256 | Total pool size of stablecoinswap contract in USD multiplied by 10\*\*18 |
 
-## supported\_tokens
+## supportedTokens
 
 {% code-tabs %}
 {% code-tabs-item title="Smart Contract" %}
 ```python
-supported_tokens: public(address[5])
+supportedTokens: public(address[5])
 ```
 {% endcode-tabs-item %}
 
