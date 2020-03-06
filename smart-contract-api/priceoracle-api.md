@@ -6,20 +6,20 @@ description: Contract is written in Vyper (0.1.0b9)
 
 ## poolSize
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 @constant
 def poolSize(contract_address: address) -> uint256
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.poolSize(stablecoinswap_address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -31,19 +31,19 @@ contract.methods.poolSize(stablecoinswap_address).call()
 
 ## supportedTokens
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 supportedTokens: public(address[5])
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```
 contract.methods.supported_tokens(index).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -55,19 +55,19 @@ contract.methods.supported_tokens(index).call()
 
 ## normalized\_token\_prices
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 normalized_token_prices: public(map(address, uint256))
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.normalized_token_prices(token_address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |

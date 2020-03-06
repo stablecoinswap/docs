@@ -12,8 +12,8 @@ description: Contract is written in Vyper (0.1.0b9)
 Adding liquidity is free. However, removing liquidity bears the same fee as the swap operation. This is to prevent users from bypassing the trading fee by depositing liquidity in one token and instantly withdrawing it in another token.
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 def addLiquidity(
     token_address: address, 
@@ -21,14 +21,14 @@ def addLiquidity(
     deadline: timestamp
 ) -> bool
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.addLiquidity(token_address, amount, deadline).send({ from: user_address }, callback)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -42,8 +42,8 @@ contract.methods.addLiquidity(token_address, amount, deadline).send({ from: user
 
 ## removeLiquidity
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 def removeLiquidity(
     token_address: address, 
@@ -52,14 +52,14 @@ def removeLiquidity(
     deadline: timestamp
 ) -> bool
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```
  contract.methods.removeLiquidity(token_address, amount, min_output_amount, deadline).send({ from: user_address }, callback)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -74,8 +74,8 @@ def removeLiquidity(
 
 ## swapTokens
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 def swapTokens(
     input_token: address,
@@ -85,14 +85,14 @@ def swapTokens(
     deadline: timestamp
 ) -> bool
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```
 contract.methods.swapTokens(input_token_address, output_token_address, input_amount, min_output_amount, deadline).send({ from: this.currentAddress() }, callback)
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -108,8 +108,8 @@ contract.methods.swapTokens(input_token_address, output_token_address, input_amo
 
 ## tokenExchangeRateAfterFees
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 @constant
 def tokenExchangeRateAfterFees(
@@ -117,14 +117,14 @@ def tokenExchangeRateAfterFees(
     output_token_address: address
 ) -> uint256
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.tokenExchangeRateAfterFees(input_token_address, output_token_address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -151,8 +151,8 @@ contract.methods.tokenExchangeRateAfterFees(input_token_address, output_token_ad
   </tbody>
 </table>## tokenOutputAmountAfterFees
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 @constant
 def tokenOutputAmountAfterFees(
@@ -161,14 +161,14 @@ def tokenOutputAmountAfterFees(
     output_token_address: address
 ) -> uint256
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.tokenOutputAmountAfterFees(amount, input_token_address, output_token_address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -182,20 +182,20 @@ contract.methods.tokenOutputAmountAfterFees(amount, input_token_address, output_
 
 ## poolOwnership
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 @constant
 def poolOwnership(user_address: address) -> decimal
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.poolOwnership(address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -207,20 +207,20 @@ contract.methods.poolOwnership(address).call()
 
 ## fees
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 @constant
 def fees(fee_name: string[32]) -> decimal
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.fees(fee_name).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -232,19 +232,19 @@ contract.methods.fees(fee_name).call()
 
 ## inputTokens
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 inputTokens: public(map(address, bool))
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.inputTokens(address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -256,19 +256,19 @@ contract.methods.inputTokens(address).call()
 
 ## outputTokens
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 outputTokens: public(map(address, bool))
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.outputTokens(address).call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Parameter | Type | Description |
 | :--- | :--- | ---: |
@@ -280,19 +280,19 @@ contract.methods.outputTokens(address).call()
 
 ## priceOracleAddress
 
-{% code-tabs %}
-{% code-tabs-item title="Smart Contract" %}
+{% tabs %}
+{% tab title="Smart Contract" %}
 ```python
 priceOracleAddress: public(address)
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Web3" %}
+{% tab title="Web3" %}
 ```javascript
 contract.methods.priceOracleAddress().call()
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 | Returns |  |
 | :--- | ---: |
